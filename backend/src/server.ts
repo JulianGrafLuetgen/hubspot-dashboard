@@ -1,73 +1,95 @@
-import express, { Request, Response } from 'express'
-import cors from 'cors'
-import { readFile } from 'node:fs/promises'
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
+import express, { Request, Response } from 'express';
+import cors from 'cors';
+import { readFileSync } from 'fs';
+import { join } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+// Enable CORS for frontend
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
+
+// Middleware to parse JSON
+app.use(express.json());
+
+// Serve static files (optional)
+app.use('/static', express.static(join(__dirname, '..', 'data')));
+
+// API response types
 interface ApiResponse<T> {
-  success: boolean
-  data: T
-  timestamp: string
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
+  timestamp: string;
 }
 
-interface DataEntry {
-  companySize: 'Startup (1-10)' | 'Small (11-50)' | 'Medium (51-200)' | 'Large (201-1000)' | 'Enterprise (1000+)'
-  industry: 'E-Commerce' | 'Media & Marketing' | 'Finance & Banking' | 'SaaS & Technology' | 'Education' | 'Consulting'
-  quarter: '2024-Q1' | '2024-Q2' | '2024-Q3' | '2024-Q4'
-  responseValue: string
-  numResponses: number
+interface HealthResponse {
+  status: string;
+  timestamp: string;
+  service: string;
 }
 
-interface Question {
-  questionId: 'q1' | 'q2' | 'q3'
-  questionNumber: number
-  question: string
-  questionType: 'multi_response'
-  description: string
-  data: DataEntry[]
+interface RootResponse {
+  message: string;
+  version: string;
+  endpoints: Record<string, string>;
 }
 
-interface HubSpotData {
-  metadata?: Record<string, unknown>
-  uniqueValues: {
-    companySize: string[]
-    industry: string[]
-    quarter: string[]
-  }
-  questions: Question[]
-}
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-const app = express()
-app.use(cors())
-
-const PORT = Number(process.env.PORT || 3001)
-
-app.get('/api/health', (_req: Request, res: Response) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString(), service: 'hubspot-backend' })
-})
-
-app.get('/api/hubspot-data', async (_req: Request, res: Response) => {
+// API endpoint to serve HubSpot data
+app.get('/api/hubspot-data', (req: Request, res: Response<ApiResponse<any>>) => {
   try {
-    const dataPath = join(__dirname, '..', 'data', 'data.json')
-    const raw = await readFile(dataPath, 'utf-8')
-    const parsed: HubSpotData = JSON.parse(raw)
-    const response: ApiResponse<HubSpotData> = {
+    const dataPath = join(__dirname, '..', 'data', 'data.json');
+    const data = readFileSync(dataPath, 'utf8');
+    const jsonData = JSON.parse(data);
+    
+    res.json({
       success: true,
-      data: parsed,
-      timestamp: new Date().toISOString(),
-    }
-    res.json(response)
+      data: jsonData,
+      timestamp: new Date().toISOString()
+    });
   } catch (error) {
-    res.status(500).json({ success: false, data: null, timestamp: new Date().toISOString(), error: String(error) })
+    console.error('Error reading data:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to load HubSpot data',
+      message: error instanceof Error ? error.message : 'Unknown error',
+      timestamp: new Date().toISOString()
+    });
   }
-})
+});
+
+// Health check endpoint
+app.get('/api/health', (req: Request, res: Response<HealthResponse>) => {
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    service: 'hubspot-data-api'
+  });
+});
+
+// Root endpoint
+app.get('/', (req: Request, res: Response<RootResponse>) => {
+  res.json({
+    message: 'HubSpot Data API',
+    version: '1.0.0',
+    endpoints: {
+      '/api/hubspot-data': 'Get HubSpot evaluation data',
+      '/api/health': 'Health check'
+    }
+  });
+});
 
 app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`[backend] listening on http://localhost:${PORT}`)
-})
-
-
+  console.log(`🚀 HubSpot Data API server running on http://localhost:${PORT}`);
+  console.log(`📊 Data endpoint: http://localhost:${PORT}/api/hubspot-data`);
+  console.log(`❤️  Health check: http://localhost:${PORT}/api/health`);
+});
