@@ -230,7 +230,7 @@ useHead({ title: 'About – HubSpot Insights' })
               <li class="flex items-start gap-2 text-sm">
 
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">11</div>
-                <input type="checkbox"   aria-label="Chart component lifecycle outlined" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked  aria-label="Chart component lifecycle outlined" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Chart component lifecycle (destroy/create) outlined</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
@@ -602,6 +602,25 @@ pnpm -C frontend add pandas-js</code></pre>
         </div>
       </div>
 
+      <!-- Step 11: Chart lifecycle (destroy/create) -->
+      <div id="step-11" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
+          11
+        </div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Chart lifecycle handled via key" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Chart component lifecycle (destroy/create)</h4>
+          </div>
+          <div class="prose">
+            <ul>
+              <li>Implemented reactive <code>chartKey</code> in <code>pages/index.vue</code> that increments on processed data changes to force destroy/create.</li>
+              <li>Chart props now reflect processed Q1 data with dynamic <code>labels</code>, <code>values</code>, <code>title</code>, and <code>subtitle</code>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
 
       <!-- Step 12: Backend Implementation -->
       <div id="backend-implementation" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
@@ -644,7 +663,20 @@ pnpm -C frontend add pandas-js</code></pre>
  <br>     
 
 <h1 class="mt-4 text-3xl font-semibold tracking-tight">Issues and Pitfalls</h1>
-<br>     
+<br>
+
+<div class="prose dark:prose-invert max-w-none">
+  <h3>11. pandas-js groupBy not available at runtime</h3>
+  <p>
+    Encountered <code>TypeError: df.groupBy is not a function</code> when calling <code>new DataFrame(filtered).groupBy(...)</code>.
+    This is unrelated to Chart.js. It indicates either missing helpers or version/runtime differences in <code>pandas-js</code> build.
+  </p>
+  <ul>
+    <li>Added <code>babel-runtime</code> to satisfy <code>pandas-js</code> requires.</li>
+    <li>Left a <code>debugger</code> in <code>useDataProcessing</code> to inspect the DataFrame instance and available methods.</li>
+    <li>Workaround options: custom reduce over <code>filtered</code>, or adapt to the actual <code>pandas-js</code> API exposed in this environment.</li>
+  </ul>
+</div>
 
     </div>
   </section>

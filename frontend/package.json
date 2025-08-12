@@ -23,6 +23,7 @@
     "@nuxtjs/color-mode": "^3.5.2",
     "@tailwindcss/vite": "^4.1.11",
     "chart.js": "^4.4.7",
+    "babel-runtime": "^6.26.0",
     "nuxt": "^4.0.3",
     "tailwindcss": "^4.1.11",
     "vite-tsconfig-paths": "^5.1.4",

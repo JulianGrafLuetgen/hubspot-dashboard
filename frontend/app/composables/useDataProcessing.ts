@@ -1,8 +1,9 @@
-import type { ChartData } from 'chart.js'
 import { DataFrame } from 'pandas-js'
 import type { Question, FilterState } from './useHubSpotData'
 
-interface ProcessedChartData extends ChartData {
+interface ProcessedChartData {
+  labels: string[]
+  datasets: { label: string; data: number[] }[]
   title: string
   subtitle: string
 }
@@ -14,7 +15,8 @@ export function useDataProcessing() {
       (!filters.industry.length || filters.industry.includes(entry.industry)) &&
       (!filters.quarter.length || filters.quarter.includes(entry.quarter)),
     )
-
+    // eslint-disable-next-line no-debugger
+    debugger;
     const df = new DataFrame(filtered)
     const aggregated = df
       .groupBy('responseValue')
@@ -25,8 +27,8 @@ export function useDataProcessing() {
     // pandas-js toJSON shape may vary; expect something like { numResponses: { key: value } }
     const counts = aggregated.numResponses
 
-    const labels = Object.keys(counts)
-    const data = Object.values(counts)
+    const labels: string[] = Object.keys(counts)
+    const data: number[] = Object.values(counts)
 
     const parts: string[] = []
     if (filters.companySize.length) parts.push(filters.companySize.join(', '))

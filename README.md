@@ -36,13 +36,5 @@ This runs backend and frontend in parallel.
 
 ## Frontend
 
-- Nuxt 4, Tailwind via `@nuxtjs/tailwindcss`
-- Aliases `~/*` and `@/*` map to `app/*`
+- Nuxt 4, Tailwind via `https://github.com/atinux/content-wind/` and `@nuxtjs/tailwindcss`
 - Composable `useHubSpotData` fetches from `http://localhost:3001/api/hubspot-data`
-
-## Façade
-
-- Public types: `DataEntry`, `Question`, `HubSpotData`, `FilterState`, `ChartData`, and `ApiResponse<T>`
-- Build docs: `pnpm docs`
-
-

@@ -15,7 +15,6 @@ A minimal Nuxt 4 app for visualizing HubSpot data using Vue 3, Tailwind CSS, and
 - `app/pages/index.vue` – Headline, filter bar placeholder, chart placeholder
 - `app/pages/about.vue` – Project notes and time blocks
 - `plugins/chart.client.ts` – Chart.js registration
-- `public/data.json` – Data source for fetch-based loading
 
 ## Notes
 
