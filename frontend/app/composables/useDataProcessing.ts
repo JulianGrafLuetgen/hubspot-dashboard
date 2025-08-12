@@ -1,9 +1,9 @@
-import { DataFrame } from 'pandas-js'
 import type { Question, FilterState } from './useHubSpotData'
+import { DataFrame } from '../../../packages/pandas-facade/src/index'
 
 interface ProcessedChartData {
   labels: string[]
-  datasets: { label: string; data: number[] }[]
+  values: number[]
   title: string
   subtitle: string
 }
@@ -15,29 +15,31 @@ export function useDataProcessing() {
       (!filters.industry.length || filters.industry.includes(entry.industry)) &&
       (!filters.quarter.length || filters.quarter.includes(entry.quarter)),
     )
-    // eslint-disable-next-line no-debugger
-    debugger;
-    const df = new DataFrame(filtered)
+    
+    // Use facade for grouping + aggregation
+    const df = new DataFrame(filtered);
     const aggregated = df
       .groupBy('responseValue')
       .sum('numResponses')
       .sortValues('numResponses', { ascending: false })
-      .toJSON<{ numResponses: Record<string, number> }>()
+      .to_json();
 
-    // pandas-js toJSON shape may vary; expect something like { numResponses: { key: value } }
-    const counts = aggregated.numResponses
+    // Generate filter summary for subtitle
+  const filterParts = [];
+  if (filters.companySize.length) filterParts.push(`${filters.companySize.join(', ')}`);
+  if (filters.industry.length) filterParts.push(`${filters.industry.join(', ')}`);
+  if (filters.quarter.length) filterParts.push(`${filters.quarter.join(', ')}`);
+  
+  const subtitle = filterParts.length 
+    ? `Filtered: ${filterParts.join(' | ')}` 
+    : 'All Data';
 
-    const labels: string[] = Object.keys(counts)
-    const data: number[] = Object.values(counts)
-
-    const parts: string[] = []
-    if (filters.companySize.length) parts.push(filters.companySize.join(', '))
-    if (filters.industry.length) parts.push(filters.industry.join(', '))
-    if (filters.quarter.length) parts.push(filters.quarter.join(', '))
-
-    const subtitle = parts.length ? `Filtered: ${parts.join(' | ')}` : 'All Data'
-
-    return { labels, datasets: [{ label: 'Mentions', data }], title: question.question, subtitle }
+  return {
+    labels: Object.keys(aggregated.numResponses),
+    values: Object.values(aggregated.numResponses),
+    title: question.question,
+    subtitle,
+  }
   }
 
   return { processChartData }

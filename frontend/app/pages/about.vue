@@ -208,7 +208,7 @@ useHead({ title: 'About – HubSpot Insights' })
                 <span>Install Chart.js and pandas-js</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">08</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">07</div>
                 <input type="checkbox" checked aria-label="Basic styling with Tailwind" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Basic styling with Tailwind</span>
               </li>
@@ -223,34 +223,33 @@ useHead({ title: 'About – HubSpot Insights' })
             <ul class="mt-3 space-y-1">
               
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">10</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">08</div>
                 <input type="checkbox" checked  aria-label="Composables planned" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Composables planned: <code>useHubSpotData</code>, <code>useDataProcessing</code></span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">11</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">09</div>
                 <input type="checkbox" checked  aria-label="Chart component lifecycle outlined" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Chart component lifecycle (destroy/create) outlined</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">12</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">10</div>
                 <input type="checkbox" checked  aria-label="Load data.json from backend" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Load data.json from backend</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">13</div>
-                <input type="checkbox"  aria-label="Data aggregation function" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">11</div>
+                <input type="checkbox" checked  aria-label="Data aggregation function" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Data aggregation function (sum numResponses by responseValue)</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">14</div>
-                <input type="checkbox"  aria-label="Choose question to visualize" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">12</div>
+                <input type="checkbox" checked  aria-label="Choose question to visualize" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Choose one question (Q1, Q2, or Q3) to visualize</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">15</div>
-                <input type="checkbox"  aria-label="Wire up chart with real data" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">13</div>
+                <input type="checkbox" checked  aria-label="Wire up chart with real data" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Wire up chart with real data</span>
               </li>
             </ul>
@@ -263,37 +262,37 @@ useHead({ title: 'About – HubSpot Insights' })
             <h2 class="text-xl font-medium">Hour 3: Multi-select filter implementation</h2>
             <ul class="mt-3 space-y-1">
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">16</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">14</div>
                 <input type="checkbox"  aria-label="FilterState model and defaults defined" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span><code>FilterState</code> model and defaults defined</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">17</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">15</div>
                 <input type="checkbox"  aria-label="Chip interactions specified" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Chip interactions and toggle behavior specified</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">18</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">16</div>
                 <input type="checkbox"  aria-label="Pipeline planned" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Pipeline hook-up (filter → group → aggregate → sort) planned</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">19</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">17</div>
                 <input type="checkbox"  aria-label="Add one multi-select filter" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Add one multi-select filter (company size)</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">20</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">18</div>
                 <input type="checkbox"  aria-label="Connect multi-select to chart updates" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Connect multi-select state to chart data updates</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">21</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">19</div>
                 <input type="checkbox"  aria-label="Debug reactivity issues" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Debug any reactivity issues</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">22</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">20</div>
                 <input type="checkbox"  aria-label="Test multiple selections" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Test multiple selections working together</span>
               </li>
@@ -307,37 +306,37 @@ useHead({ title: 'About – HubSpot Insights' })
             <h2 class="text-xl font-medium">Hour 4: Documentation &amp; Polish</h2>
             <ul class="mt-3 space-y-1">
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">23</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">21</div>
                 <input type="checkbox"  aria-label="SSR/CSR parity checks and client guards listed" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>SSR/CSR parity checks and client guards listed, no hydration issues</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">24</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">22</div>
                 <input type="checkbox"  aria-label="Strict linting and TypeScript rules enforced" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Strict linting and TypeScript rules enforced, no linting errors</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">25</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">23</div>
                 <input type="checkbox"  aria-label="TSDoc/TypeDoc regeneration steps captured" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>TSDoc/TypeDoc regeneration steps captured</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">26</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">24</div>
                 <input type="checkbox"  aria-label="Create comprehensive About page" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Create comprehensive About page</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">27</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">25</div>
                 <input type="checkbox"  aria-label="Code cleanup and comments" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Code cleanup and comments correct</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">28</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">26</div>
                 <input type="checkbox"  aria-label="Test final functionality" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Test final functionality</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">29</div>
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">27</div>
                 <input type="checkbox"  aria-label="Document next steps" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Document what you'd do next</span>
               </li>
@@ -540,10 +539,10 @@ pnpm -C frontend add pandas-js</code></pre>
       </div>
 
 
-      <!-- Step 08: Basic styling with Tailwind -->
- <div id="step-08" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+      <!-- Step 07: Basic styling with Tailwind -->
+      <div id="step-07" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
         <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
-          08
+          07
         </div>
         <div class="flex-1 space-y-2">
           <div class="flex items-start gap-3">
@@ -575,10 +574,10 @@ pnpm -C frontend add pandas-js</code></pre>
           </div>
         </div>
       </div>
-      <!-- Step 10: Composables planned and created -->
-      <div id="step-10" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+      <!-- Step 08: Composables planned and created -->
+      <div id="step-08" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
         <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
-          10
+          08
         </div>
         <div class="flex-1 space-y-2">
           <div class="flex items-start gap-3">
@@ -602,10 +601,10 @@ pnpm -C frontend add pandas-js</code></pre>
         </div>
       </div>
 
-      <!-- Step 11: Chart lifecycle (destroy/create) -->
-      <div id="step-11" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+      <!-- Step 09: Chart lifecycle (destroy/create) -->
+      <div id="step-09" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
         <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
-          11
+          09
         </div>
         <div class="flex-1 space-y-2">
           <div class="flex items-start gap-3">
@@ -622,10 +621,10 @@ pnpm -C frontend add pandas-js</code></pre>
       </div>
 
 
-      <!-- Step 12: Backend Implementation -->
+      <!-- Step 10: Backend Implementation -->
       <div id="backend-implementation" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
         <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
-          12
+          10
         </div>
         <div class="flex-1 space-y-2">
           <div class="flex items-start gap-3">
@@ -658,6 +657,85 @@ pnpm -C frontend add pandas-js</code></pre>
         </div>
       </div>
 
+      <!-- Step 11: Data aggregation function -->
+      <div id="step-11" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
+          11
+        </div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Data aggregation function implemented" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Data aggregation function (sum numResponses by responseValue)</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              Implemented per <strong>CHALLENGE.md</strong>. The initial plan used <code>pandas-js</code>, but
+              <em>groupBy</em> was not reliable in this runtime. To keep a DF-style pipeline, a façade was created to
+              encapsulate <code>pandas-js</code> and add missing functionality in <code>packages/pandas-facade</code>. Usage is
+              similar in spirit to <a href="https://www.npmjs.com/package/pandas-js" target="_blank" rel="noopener">pandas-js on npm</a>.
+            </p>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-[#f6f8fa] dark:border-white/10 dark:bg-white/5">
+            <div class="px-3 pt-1 pb-2 text-xs text-gray-600 dark:text-white/60">Example (façade)</div>
+            <pre class="not-prose overflow-auto rounded-lg bg-white px-5 pb-5 pt-2 text-sm text-slate-800 dark:bg-white/10 dark:text-slate-50"><code>import { DataFrame } from 'pandas-facade'
+
+const df = new DataFrame(filteredRows)
+const result = df
+  .groupBy('responseValue')
+  .sum('numResponses')
+  .sortValues('numResponses', { ascending: false })
+  .to_json()</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 12: Choose one question to visualize -->
+      <div id="step-12" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
+          12
+        </div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Question chosen" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Choose one question (Q1, Q2, or Q3) to visualize</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              Selected <strong>Question 1</strong> for the initial chart. The filtering + aggregation pipeline supports
+              swapping to Q2 or Q3 without code changes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 13: Wire up chart with real data -->
+      <div id="step-13" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
+          13
+        </div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Chart wired with real data" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Wire up chart with real data</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              Implemented using <code>app/components/ChartComponent.vue</code>. Chart.js core elements are registered once,
+              and the component accepts <code>labels</code>, <code>values</code>, <code>title</code>, and <code>subtitle</code>.
+            </p>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-[#f6f8fa] dark:border-white/10 dark:bg-white/5">
+            <div class="px-3 pt-1 pb-2 text-xs text-gray-600 dark:text-white/60">Usage</div>
+            <pre class="not-prose overflow-auto rounded-lg bg-white px-5 pb-5 pt-2 text-sm text-slate-800 dark:bg-white/10 dark:text-slate-50"><code>&lt;ChartComponent
+  :labels="labels"
+  :values="values"
+  :title="title"
+  :subtitle="subtitle"
+/&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
       <br>
       <hr>
  <br>     
@@ -676,6 +754,38 @@ pnpm -C frontend add pandas-js</code></pre>
     <li>Left a <code>debugger</code> in <code>useDataProcessing</code> to inspect the DataFrame instance and available methods.</li>
     <li>Workaround options: custom reduce over <code>filtered</code>, or adapt to the actual <code>pandas-js</code> API exposed in this environment.</li>
   </ul>
+</div>
+
+<div class="prose dark:prose-invert max-w-none mt-6">
+  <h3>11. Fighting the AI to avoid native-only TS solutions</h3>
+  <p>
+    The assistant repeatedly suggested solving grouping/aggregation with plain TypeScript (maps/reduce), which works
+    but diverges from the task’s intent to exercise a DataFrame-like approach (pandas-js). This led to back-and-forth
+    enforcing a DataFrame pipeline so the charting flow mirrors analytical tooling rather than bespoke loops.
+  </p>
+  <ul>
+    <li>Resolution: kept a composable API that expects a DF-chain and ensured the debugger pauses with DF-shaped data.</li>
+    <li>Trade-off: native TS is simpler to ship, but the exercise prioritizes DF semantics and chaining.</li>
+  </ul>
+</div>
+
+<div class="prose dark:prose-invert max-w-none mt-6">
+  <h3>11. Façade drift vs. pandas-js reliance</h3>
+  <p>
+    In practice, <code>pandas-js</code> did not expose a reliable <code>groupBy</code> implementation in this runtime,
+    which repeatedly led to <code>df.groupBy is not a function</code> at usage sites. To keep a DataFrame-style
+    pipeline, the grouping/aggregation logic was moved into an encapsulated package (<code>packages/pandas-facade</code>)
+    and expanded there. This guarantees consistent behavior across environments while preserving a DF-like chain.
+  </p>
+  <p class="mt-2">Façade API surface implemented internally (no code shown):</p>
+  <ul>
+    <li><code>groupBy(data, keys)</code> → returns chainable <code>GroupedDataFrame</code></li>
+  </ul>
+  <p>
+    Next step: swap these internals to call into <code>pandas-js</code> once its runtime surface is verified (and
+    polyfills like <code>babel-runtime</code> are made available), keeping the same typed façade. Making KI do this
+    was extra painful — I expected it to be easier.
+  </p>
 </div>
 
     </div>

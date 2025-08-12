@@ -1,0 +1,25 @@
+{
+  "name": "pandas-facade",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/types/src/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && typedoc",
+    "clean": "rm -rf dist docs",
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "pandas-js": "^0.2.4"
+  },
+  "devDependencies": {
+    "typedoc": "^0.28.10",
+    "typedoc-plugin-markdown": "^4.8.0",
+    "typescript": "^5.9.2"
+  }
+}

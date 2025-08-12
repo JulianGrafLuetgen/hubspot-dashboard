@@ -53,9 +53,7 @@ const selectedFiltersLabel = computed(() =>
     <div
       class="border-omr-violet-light/30 dark:bg-dt-surface-base rounded-lg border bg-white/80 p-4 shadow-sm dark:border-gray-800"
     >
-      <h2
-        class="text-quarters-dark dark:text-dt-text-subtle mb-2 text-lg font-medium"
-      >
+      <h2 class="text-quarter-dark dark:gradient-text mb-4 text-lg font-medium">
         Filter Bar
       </h2>
       <div class="flex flex-wrap items-center gap-2">
@@ -78,7 +76,7 @@ const selectedFiltersLabel = computed(() =>
     <div
       class="border-omr-violet-light/30 dark:bg-dt-surface-base rounded-lg border bg-white/80 p-4 shadow-sm dark:border-gray-800"
     >
-      <h2 class="text-quarter-dark dark:text-dt-text-primary mb-4 text-lg font-medium">
+      <h2 class="text-quarter-dark dark:gradient-text mb-4 text-lg font-medium">
         Chart
       </h2>
       <ClientOnly>
@@ -89,7 +87,7 @@ const selectedFiltersLabel = computed(() =>
           <ChartComponent
             :key="chartKey"
             :labels="processed.labels"
-            :values="(processed.datasets?.[0]?.data as number[])"
+            :values="processed.values"
             :title="processed.title"
             :subtitle="processed.subtitle"
           />
