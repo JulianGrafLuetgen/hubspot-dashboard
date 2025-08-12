@@ -194,7 +194,7 @@ useHead({ title: 'About – HubSpot Insights' })
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">04</div>
-                <input type="checkbox" aria-label="Chart.js installed and client plugin registered" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked aria-label="Chart.js installed and client plugin registered" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Chart.js installed and client plugin registered</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
@@ -432,6 +432,30 @@ export default defineNuxtConfig({
           <div class="rounded-xl border border-gray-200 bg-[#f6f8fa] dark:border-white/10 dark:bg-white/5">
             <div class="px-3 pt-1 pb-2 text-xs text-gray-600 dark:text-white/60">app/assets/css/main.css</div>
             <pre class="not-prose overflow-auto rounded-lg bg-white px-5 pb-5 pt-2 text-sm text-slate-800 dark:bg-white/10 dark:text-slate-50"><code>@import "tailwindcss";</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 04: Chart.js setup -->
+      <div id="step-04" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
+          04
+        </div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Chart.js installed and component created" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Chart.js installation and Vue wrapper</h4>
+          </div>
+          <div class="prose">
+            <ul>
+              <li>Installed <code>vue-chartjs</code> alongside existing <code>chart.js</code>.</li>
+              <li>Registered core Chart.js elements in <code>frontend/plugins/chart.client.ts</code>.</li>
+              <li>Added reusable <code>ChartComponent.vue</code> in <code>app/components/</code> with typed props and horizontal bar config.</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-[#f6f8fa] dark:border-white/10 dark:bg-white/5">
+            <div class="px-3 pt-1 pb-2 text-xs text-gray-600 dark:text-white/60">Install</div>
+            <pre class="not-prose overflow-auto rounded-lg bg-white px-5 pb-5 pt-2 text-sm text-slate-800 dark:bg-white/10 dark:text-slate-50"><code>pnpm add vue-chartjs chart.js</code></pre>
           </div>
         </div>
       </div>
