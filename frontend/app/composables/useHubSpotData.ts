@@ -1,5 +1,5 @@
-import { ref, computed } from 'vue'
-import { useFetch } from '#app'
+import { computed } from 'vue'
+import { useFetch } from 'nuxt/app'
 
 export interface ApiResponse<T> {
   success: boolean
@@ -32,6 +32,13 @@ export interface HubSpotData {
     quarter: string[]
   }
   questions: Question[]
+}
+
+/** Multi-select filter state. Empty arrays mean no filter applied. */
+export interface FilterState {
+  companySize: string[]
+  industry: string[]
+  quarter: string[]
 }
 
 export function useHubSpotData() {

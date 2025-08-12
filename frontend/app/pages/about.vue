@@ -204,7 +204,7 @@ useHead({ title: 'About – HubSpot Insights' })
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">06</div>
-                <input type="checkbox"  aria-label="Install Chart.js and pandas-js" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked aria-label="Install Chart.js and pandas-js" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Install Chart.js and pandas-js</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
@@ -224,7 +224,7 @@ useHead({ title: 'About – HubSpot Insights' })
               
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">10</div>
-                <input type="checkbox"   aria-label="Composables planned" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked  aria-label="Composables planned" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Composables planned: <code>useHubSpotData</code>, <code>useDataProcessing</code></span>
               </li>
               <li class="flex items-start gap-2 text-sm">
@@ -513,7 +513,34 @@ pnpm add -D typescript tsx @types/node @types/express</code></pre>
         </div>
       </div>
  
- <!-- Step 08: Basic styling with Tailwind -->
+ 
+
+      <!-- Step 06: Install Chart.js and pandas-js -->
+      <div id="step-06" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
+          06
+        </div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Installed Chart.js and pandas-js" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Install Chart.js and pandas-js</h4>
+          </div>
+          <div class="prose">
+            <ul>
+              <li>Added <code>vue-chartjs</code> wrapper and registered Chart.js elements via plugin.</li>
+              <li>Declared ambient typings for <code>pandas-js</code> and used <code>DataFrame</code> for grouping, sum, and sorting.</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-[#f6f8fa] dark:border-white/10 dark:bg-white/5">
+            <div class="px-3 pt-1 pb-2 text-xs text-gray-600 dark:text-white/60">Terminal</div>
+            <pre class="not-prose overflow-auto rounded-lg bg-white px-5 pb-5 pt-2 text-sm text-slate-800 dark:bg-white/10 dark:text-slate-50"><code>pnpm -C frontend add vue-chartjs chart.js
+pnpm -C frontend add pandas-js</code></pre>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Step 08: Basic styling with Tailwind -->
  <div id="step-08" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
         <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
           08
@@ -548,8 +575,35 @@ pnpm add -D typescript tsx @types/node @types/express</code></pre>
           </div>
         </div>
       </div>
+      <!-- Step 10: Composables planned and created -->
+      <div id="step-10" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
+          10
+        </div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Composables added" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Composables: <code>useHubSpotData</code> and <code>useDataProcessing</code></h4>
+          </div>
+          <div class="prose">
+            <ul>
+              <li><code>useHubSpotData</code>: fetches backend API and exports domain interfaces, including <code>FilterState</code>.</li>
+              <li><code>useDataProcessing</code>: filters by <code>FilterState</code>, aggregates with <code>DataFrame</code>, and returns Chart.js-ready data plus titles.</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-[#f6f8fa] dark:border-white/10 dark:bg-white/5">
+            <div class="px-3 pt-1 pb-2 text-xs text-gray-600 dark:text-white/60">Interfaces Added</div>
+            <pre class="not-prose overflow-auto rounded-lg bg-white px-5 pb-5 pt-2 text-sm text-slate-800 dark:bg-white/10 dark:text-slate-50"><code>export interface FilterState {
+  companySize: string[]
+  industry: string[]
+  quarter: string[]
+}</code></pre>
+          </div>
+        </div>
+      </div>
 
-      <!-- Backend Implementation -->
+
+      <!-- Step 12: Backend Implementation -->
       <div id="backend-implementation" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
         <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
           12
