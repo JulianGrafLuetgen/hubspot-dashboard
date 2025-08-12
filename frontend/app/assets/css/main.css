@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* OMR Sans font family */
+@font-face {
+  font-family: 'OMR Sans';
+  src: url('/fonts/OMR-Sans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'OMR Sans';
+  src: url('/fonts/OMR-Sans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'OMR Sans';
+  src: url('/fonts/OMR-Sans-Extra-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* OMR brand */
+  --color-omr-violet-dark: rgb(126 76 252);
+  --color-omr-violet-medium: rgb(139 111 253);
+  --color-omr-violet-light: rgb(169 154 253);
+
+  --color-omr-teal-dark: rgb(36 163 163);
+  --color-omr-teal-medium: rgb(61 195 196);
+  --color-omr-teal-light: rgb(125 222 215);
+
+  --color-omr-yellow-dark: rgb(238 170 31);
+  --color-omr-yellow-medium: rgb(240 192 43);
+  --color-omr-yellow-light: rgb(250 214 110);
+
+  --color-omr-gray-dark: rgb(51 51 51);
+  --color-omr-gray-medium: rgb(102 102 102);
+  --color-omr-gray-light: rgb(153 153 153);
+
+  /* Dark theme tokens (dt-*) */
+  --color-dt-text-disabled: #fff6;
+  --color-dt-text-error: #ef4463;
+  --color-dt-text-error-inverse: #4a071b;
+  --color-dt-text-inverse: #0c0d0f;
+  --color-dt-text-main: #f8f9fb;
+  --color-dt-text-primary: #ada6fc;
+  --color-dt-text-primary-subtle: #601ee3;
+  --color-dt-text-selected: #8e7bff;
+  --color-dt-text-solid: #ffffff;
+  --color-dt-text-subtle: #c0c4cc;
+  --color-dt-text-subtlest: #7f8694;
+  --color-dt-text-success: #a7f3d8;
+  --color-dt-text-success-inverse: #022c26;
+  --color-dt-text-warning: #fbe69c;
+  --color-dt-text-warning-inverse: #6f3d14;
+
+  --color-dt-icon-disabled: #fff6;
+  --color-dt-icon-error: #ef4463;
+  --color-dt-icon-error-inverse: #4a071b;
+  --color-dt-icon-inverse: #0c0d0f;
+  --color-dt-icon-main: #f8f9fb;
+  --color-dt-icon-primary: #ada6fc;
+  --color-dt-icon-primary-subtle: #601ee3;
+  --color-dt-icon-selected: #8e7bff;
+  --color-dt-icon-solid: #ffffff;
+  --color-dt-icon-subtle: #c0c4cc;
+  --color-dt-icon-subtlest: #7f8694;
+  --color-dt-icon-success: #a7f3d8;
+  --color-dt-icon-success-inverse: #022c26;
+  --color-dt-icon-warning: #fbe69c;
+  --color-dt-icon-warning-inverse: #6f3d14;
+
+  --color-dt-primary-main: #ada6fc;
+  --color-dt-primary-strong: #d8d4ff;
+  --color-dt-primary-stronger: #ebe8ff;
+  --color-dt-primary-strongest: #f4f2ff;
+  --color-dt-primary-subtle: #7337fc;
+  --color-dt-primary-subtler: #4f18bf;
+  --color-dt-primary-subtlest: #42169c;
+
+  --color-dt-secondary-main: #ffdb75;
+  --color-dt-secondary-strong: #fbe69c;
+  --color-dt-secondary-stronger: #fdf2c4;
+  --color-dt-secondary-strongest: #fef9e8;
+  --color-dt-secondary-subtle: #f5c41c;
+  --color-dt-secondary-subtler: #e39807;
+  --color-dt-secondary-subtlest: #824a11;
+
+  --color-dt-error-strong: #fee5e7;
+  --color-dt-error-subtle: #9b163c;
+  --color-dt-success-strong: #d1fae9;
+  --color-dt-success-subtle: #064e42;
+  --color-dt-warning-strong: #fdf2c4;
+  --color-dt-warning-subtle: #e39807;
+
+  --color-dt-surface-base: #0c0d0f;
+}
+body {
+  @apply bg-white text-gray-900;
+  font-family: 'OMR Sans', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+/* Monospace usage defaults to IBM Plex Mono */
+pre, code, kbd, samp, .font-mono {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+/* Add backticks only around inline code within .prose (not code blocks) */
+.prose :not(pre) > code:where(:not(.not-prose,.not-prose *))::before,
+.prose :not(pre) > code:where(:not(.not-prose,.not-prose *))::after {
+  content: "`";
+  display: inline;
+}
+
+.dark body {
+  @apply bg-(--color-dt-surface-base) text-(--color-dt-text-main);
+}
+
+.prose a:not(h2 a, h3 a, h4 a, h5 a, h6 a, button a) {
+  @apply text-(--color-omr-violet-medium) dark:text-(--color-dt-text-primary);
+}

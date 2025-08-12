@@ -1,0 +1,12 @@
+packages:
+  - frontend
+  - backend
+
+ignoredBuiltDependencies:
+  - better-sqlite3
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@tailwindcss/oxide'
+  - esbuild
