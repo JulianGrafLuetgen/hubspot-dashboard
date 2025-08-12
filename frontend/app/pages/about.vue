@@ -235,7 +235,7 @@ useHead({ title: 'About – HubSpot Insights' })
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">12</div>
-                <input type="checkbox"  aria-label="Load data.json from backend" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked  aria-label="Load data.json from backend" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Load data.json from backend</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
@@ -525,9 +525,45 @@ pnpm add -D typescript tsx @types/node @types/express</code></pre>
         </div>
       </div>
 
+      <!-- Backend Implementation -->
+      <div id="backend-implementation" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">
+          12
+        </div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Backend server implemented" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Backend (TypeScript + Express)</h4>
+          </div>
+          <div class="prose">
+            <ul>
+              <li>Created <code>backend/src/server.ts</code> with Express + CORS, TypeScript config in <code>backend/tsconfig.json</code>.</li>
+              <li>Endpoints:
+                <ul>
+                  <li><code>GET /api/health</code> → <code>{ status, timestamp, service }</code></li>
+                  <li><code>GET /api/hubspot-data</code> → <code>{ success, data, timestamp }</code> (reads <code>backend/data/data.json</code>)</li>
+                </ul>
+              </li>
+              <li>Configurable <code>PORT</code> (default <code>3001</code>); safe JSON read per request.</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-[#f6f8fa] dark:border-white/10 dark:bg-white/5">
+            <div class="px-3 pt-1 pb-2 text-xs text-gray-600 dark:text-white/60">backend/package.json (scripts)</div>
+            <pre class="not-prose overflow-auto rounded-lg bg-white px-5 pb-5 pt-2 text-sm text-slate-800 dark:bg-white/10 dark:text-slate-50"><code>{
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "clean": "rm -rf dist"
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
       <br>
       <hr>
-<br>     
+ <br>     
 
 <h1 class="mt-4 text-3xl font-semibold tracking-tight">Issues and Pitfalls</h1>
 <br>     

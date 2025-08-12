@@ -8,7 +8,8 @@
     "dev": "pnpm -r --parallel dev",
     "build": "pnpm -r --parallel build",
     "start": "pnpm -r --parallel start",
-    "clean": "pnpm -r --parallel clean || true"
+    "clean": "pnpm -r --parallel clean || true",
+    "docs": "pnpm --filter pandas-facade build"
   },
   "keywords": [],
   "author": "",
