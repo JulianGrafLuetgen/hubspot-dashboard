@@ -1,15 +1,24 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useHead } from '#imports'
+import { useHubSpotData } from '@/composables/useHubSpotData'
 
 useHead({ title: 'HubSpot Insights Dashboard' })
 
-const selectedFilters = ref<string[]>([])
+const { data, loading, error } = useHubSpotData()
 
-// Placeholder fetch trigger when filters change (to be wired later)
-function onApplyFilters(newFilters: string[]) {
-  selectedFilters.value = [...newFilters]
+const selectedCompanySizes = ref<string[]>([])
+
+function toggleCompanySize(size: string) {
+  const next = new Set(selectedCompanySizes.value)
+  if (next.has(size)) next.delete(size)
+  else next.add(size)
+  selectedCompanySizes.value = Array.from(next)
 }
+
+const selectedFiltersLabel = computed(() =>
+  selectedCompanySizes.value.length ? selectedCompanySizes.value.join(', ') : 'none',
+)
 </script>
 
 <template>
@@ -28,32 +37,35 @@ function onApplyFilters(newFilters: string[]) {
       >
         Filter Bar
       </h2>
-      <div class="flex flex-wrap gap-2">
-        <button
-          class="bg-omr-teal-medium hover:bg-omr-teal-dark dark:bg-dt-primary-subtle dark:text-dt-text-main dark:hover:bg-dt-primary-subtlest rounded px-3 py-1 text-gray-900 transition hover:text-white"
-          @click="onApplyFilters(['placeholder'])"
-        >
-          Apply Placeholder Filters
-        </button>
-        <span class="text-sm text-gray-600 dark:text-gray-300"
-          >Selected: {{ selectedFilters.join(', ') || 'none' }}</span
-        >
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-sm text-gray-600 dark:text-gray-300">Company Size:</span>
+        <template v-if="data">
+          <button
+            v-for="size in data.uniqueValues.companySize"
+            :key="size"
+            class="rounded border px-2 py-1 text-sm hover:bg-gray-100 dark:hover:bg-white/10"
+            :class="selectedCompanySizes.includes(size) ? 'bg-gray-200 dark:bg-white/20' : ''"
+            @click="toggleCompanySize(size)"
+          >
+            {{ size }}
+          </button>
+        </template>
+        <span class="text-sm text-gray-600 dark:text-gray-300">Selected: {{ selectedFiltersLabel }}</span>
       </div>
     </div>
 
     <div
       class="border-omr-violet-light/30 dark:bg-dt-surface-base rounded-lg border bg-white/80 p-4 shadow-sm dark:border-gray-800"
     >
-      <h2
-        class="text-quarter-dark dark:text-dt-text-primary mb-4 text-lg font-medium"
-      >
+      <h2 class="text-quarter-dark dark:text-dt-text-primary mb-4 text-lg font-medium">
         Chart
       </h2>
       <ClientOnly>
-        <div
-          class="grid h-64 place-items-center text-gray-500 dark:text-gray-300"
-        >
-          Chart placeholder (Chart.js)
+        <div v-if="loading" class="grid h-64 place-items-center text-gray-500 dark:text-gray-300">Loading…</div>
+        <div v-else-if="error" class="grid h-64 place-items-center text-red-600">{{ error }}</div>
+        <div v-else-if="!data" class="grid h-64 place-items-center text-gray-500 dark:text-gray-300">No data</div>
+        <div v-else class="grid h-64 place-items-center text-gray-500 dark:text-gray-300">
+          Chart placeholder (wire up Chart.js next)
         </div>
         <template #fallback>
           <div class="grid h-64 place-items-center text-gray-400">
