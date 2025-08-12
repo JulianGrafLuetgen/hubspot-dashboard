@@ -1,14 +1,16 @@
 <script setup lang="ts">
-const { cover } = useAppConfig()
+import { useAppConfig, useSeoMeta } from 'nuxt/app'
+
+const { cover } = useAppConfig() as { cover?: string }
 
 useSeoMeta({
-  ogImage: cover,
+  ogImage: cover ?? '',
   twitterCard: 'summary_large_image',
 })
 </script>
 
 <template>
-  <div class="min-h-screen bg-white text-gray-900 dark:bg-(--color-dt-surface-base) dark:text-(--color-dt-text-main) sm:pt-0 sm:pb-10">
+  <div class="min-h-screen bg-(--color-dt-surface-base) text-(--color-dt-text-main) sm:pt-0 sm:pb-10 dark">
     <Html lang="en" />
     <NuxtLoadingIndicator />
     <AppNavbar />

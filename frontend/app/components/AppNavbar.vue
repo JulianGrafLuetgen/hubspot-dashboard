@@ -23,10 +23,7 @@ const navigation = [
           {{ link.title }}
         </NuxtLink>
       </div>
-      <!-- Color Mode Toggle Only -->
-      <div>
-        <ColorModeSwitch class="opacity-90 hover:opacity-100" />
-      </div>
+      <!-- Color Mode Toggle removed: forced dark theme -->
     </div>
   </nav>
 </template>

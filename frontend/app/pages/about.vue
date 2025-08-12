@@ -263,37 +263,37 @@ useHead({ title: 'About – HubSpot Insights' })
             <ul class="mt-3 space-y-1">
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">14</div>
-                <input type="checkbox"  aria-label="FilterState model and defaults defined" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked aria-label="FilterState model and defaults defined" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span><code>FilterState</code> model and defaults defined</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">15</div>
-                <input type="checkbox"  aria-label="Chip interactions specified" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
-                <span>Chip interactions and toggle behavior specified</span>
+                <input type="checkbox" checked aria-label="Chip interactions specified" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <span>Filter interactions and toggle behavior specified</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">16</div>
-                <input type="checkbox"  aria-label="Pipeline planned" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
-                <span>Pipeline hook-up (filter → group → aggregate → sort) planned</span>
+                <input type="checkbox" checked aria-label="Pipeline hook-up" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <span>Pipeline hook-up (filter → group → aggregate → sort)</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">17</div>
-                <input type="checkbox"  aria-label="Add one multi-select filter" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked aria-label="Add one multi-select filter" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Add one multi-select filter (company size)</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">18</div>
-                <input type="checkbox"  aria-label="Connect multi-select to chart updates" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked aria-label="Connect multi-select to chart updates" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Connect multi-select state to chart data updates</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">19</div>
-                <input type="checkbox"  aria-label="Debug reactivity issues" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked aria-label="Debug reactivity issues" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Debug any reactivity issues</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">20</div>
-                <input type="checkbox"  aria-label="Test multiple selections" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked aria-label="Test multiple selections" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Test multiple selections working together</span>
               </li>
             </ul>
@@ -322,7 +322,7 @@ useHead({ title: 'About – HubSpot Insights' })
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">24</div>
-                <input type="checkbox"  aria-label="Create comprehensive About page" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked aria-label="Create comprehensive About page" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Create comprehensive About page</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
@@ -332,7 +332,7 @@ useHead({ title: 'About – HubSpot Insights' })
               </li>
               <li class="flex items-start gap-2 text-sm">
                 <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[8px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">26</div>
-                <input type="checkbox"  aria-label="Test final functionality" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+                <input type="checkbox" checked aria-label="Test final functionality" class="mt-0.5 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
                 <span>Test final functionality</span>
               </li>
               <li class="flex items-start gap-2 text-sm">
@@ -354,6 +354,7 @@ useHead({ title: 'About – HubSpot Insights' })
       <br>
 
 <h1 class="mt-4 text-3xl font-semibold tracking-tight">Documentation</h1>
+ 
 
        <!-- Step 01: Monorepo setup completed -->
        <div id="step-01" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
@@ -736,6 +737,104 @@ const result = df
         </div>
       </div>
 
+           <!-- Step 14: FilterState model and defaults defined -->
+           <div id="step-14" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">14</div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="FilterState model and defaults defined" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">FilterState model and defaults defined</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">Defined <code>FilterState</code> as <code>{ companySize: string[]; industry: string[]; quarter: string[] }</code>. Initialized in <code>pages/index.vue</code> as a single reactive <code>filters</code> ref passed to the panel.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 15: Filter interactions and toggle behavior specified -->
+      <div id="step-15" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">15</div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Filter interactions specified" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Filter interactions and toggle behavior specified</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">In <code>FilterPanel.vue</code>, <code>toggle(key, value)</code> uses a <code>Set</code> per key to add/remove values, emitting <code>update:filters</code> with the new state.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 16: Pipeline hook-up (filter → group → aggregate → sort) -->
+      <div id="step-16" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">16</div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Pipeline hook-up" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Pipeline hook-up (filter → group → aggregate → sort)</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">In <code>useDataProcessing.ts</code>, apply filter triples, then <code>new DataFrame(filtered)</code> → <code>.groupBy('responseValue').sum('numResponses').sortValues('numResponses', { ascending: false })</code> → <code>.to_json()</code> → extract labels/values.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 17: Add one multi-select filter (company size) -->
+      <div id="step-17" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">17</div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Add one multi-select" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Add one multi-select filter (company size)</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">Implemented in <code>FilterPanel.vue</code> → “Company Size” buttons toggle membership. Styling aligns with OMR violet tokens.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 18: Connect multi-select state to chart data updates -->
+      <div id="step-18" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">18</div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Connect multi-select to chart updates" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Connect multi-select state to chart data updates</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">In <code>pages/index.vue</code>, pass <code>:filters</code> and listen to <code>@update:filters</code> to keep a single source of truth, which feeds <code>useDataProcessing</code> to recompute chart data.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 19: Debug any reactivity issues -->
+      <div id="step-19" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">19</div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Debug reactivity" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Debug any reactivity issues</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">Ensured the panel emits immutable arrays and the page replaces <code>filters</code> object, avoiding shallow mutations. Chart re-renders via computed and <code>chartKey</code> increment on changes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 20: Test multiple selections working together -->
+      <div id="step-20" class="flex flex-col gap-3 md:flex-row md:items-start md:gap-4 py-4">
+        <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">20</div>
+        <div class="flex-1 space-y-2">
+          <div class="flex items-start gap-3">
+            <input type="checkbox" checked aria-label="Test multiple selections" class="mt-1 h-4 w-4 cursor-default rounded border-gray-300 accent-(--color-omr-violet-medium) dark:accent-(--color-dt-primary-subtle) :opacity-100 focus:ring-omr-violet-medium">
+            <h4 class="m-0 text-sm font-semibold text-slate-900 dark:text-slate-200">Test multiple selections working together</h4>
+          </div>
+          <div class="prose">
+            <p class="text-sm text-gray-600 dark:text-gray-300">Validated combinations across Company Size, Industry, and Quarter update the chart correctly. Labels come from <code>responseValue</code>, values from <code>numResponses</code>.</p>
+          </div>
+        </div>
+      </div>
+
       <br>
       <hr>
  <br>     
@@ -744,7 +843,26 @@ const result = df
 <br>
 
 <div class="prose dark:prose-invert max-w-none">
-  <h3>11. pandas-js groupBy not available at runtime</h3>
+  <div class="flex items-center gap-2">
+    <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">00</div>
+    <h3>⚠️ Typescript setup issues</h3>
+  </div>
+  <p>
+    Along the way, I encountered some TypeScript setup issues that I had to resolve:
+  </p>
+  <ul>
+    <li>TypeScript prop typing error in <code>ChartComponent.vue</code> using <code>defineProps</code> (conflict with Chart.js types) > Taken out</li>
+    <li>ESLint flat config mismatch: <code>ConfigArray</code> vs <code>ResolvableFlatConfig</code> when mixing configs; resolved by using Nuxt’s <code>withNuxt()</code> flat config</li>
+    <li>Nuxt macro typing: <code>Cannot find name 'definePageMeta'</code>; fixed by adding <code>"types": ["nuxt"]</code> and using the macro directly</li>
+  </ul>
+</div>
+<br/>
+
+<div class="prose dark:prose-invert max-w-none">
+  <div class="flex items-center gap-2">
+    <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">11</div>
+    <h3>⚠️ pandas-js groupBy not available at runtime</h3>
+  </div>
   <p>
     Encountered <code>TypeError: df.groupBy is not a function</code> when calling <code>new DataFrame(filtered).groupBy(...)</code>.
     This is unrelated to Chart.js. It indicates either missing helpers or version/runtime differences in <code>pandas-js</code> build.
@@ -757,7 +875,10 @@ const result = df
 </div>
 
 <div class="prose dark:prose-invert max-w-none mt-6">
-  <h3>11. Fighting the AI to avoid native-only TS solutions</h3>
+  <div class="flex items-center gap-2">
+    <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">12</div>
+    <h3>⚠️ Fighting the AI to avoid native-only TS solutions</h3>
+  </div>
   <p>
     The assistant repeatedly suggested solving grouping/aggregation with plain TypeScript (maps/reduce), which works
     but diverges from the task’s intent to exercise a DataFrame-like approach (pandas-js). This led to back-and-forth
@@ -770,7 +891,10 @@ const result = df
 </div>
 
 <div class="prose dark:prose-invert max-w-none mt-6">
-  <h3>11. Façade drift vs. pandas-js reliance</h3>
+  <div class="flex items-center gap-2">
+    <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">13</div>
+    <h3>⚠️ Façade drift vs. pandas-js reliance</h3>
+  </div>
   <p>
     In practice, <code>pandas-js</code> did not expose a reliable <code>groupBy</code> implementation in this runtime,
     which repeatedly led to <code>df.groupBy is not a function</code> at usage sites. To keep a DataFrame-style
@@ -783,8 +907,24 @@ const result = df
   </ul>
   <p>
     Next step: swap these internals to call into <code>pandas-js</code> once its runtime surface is verified (and
-    polyfills like <code>babel-runtime</code> are made available), keeping the same typed façade. Making KI do this
+    polyfills like <code>babel-runtime</code> are reliably available), keeping the same typed façade. Making KI do this
     was extra painful — I expected it to be easier.
+  </p>
+</div>
+
+<div class="prose dark:prose-invert max-w-none mt-6">
+  <div class="flex items-center gap-2">
+    <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded border border-gray-700/50 font-mono text-[10px] leading-7 text-gray-950 dark:border-white/50 dark:text-white">21</div>
+    <h3>⚠️ Hydration issues in console</h3>
+  </div>
+  <p>
+    Occasional hydration warnings appeared during SSR → CSR transitions. Wrapped chart rendering in <code>&lt;ClientOnly&gt;</code> and ensured
+    null checks around processed data to avoid content mismatches.
+    E.g.:
+    <pre>[Vue warn]: Hydration node mismatch:
+- rendered on server: &lt;div class="text-center py-2 md:py-3"&gt;@&lt;/div&gt;
+- expected on client: Symbol (v-cmt)
+at &lt;FilterPanel ...&gt;</pre>
   </p>
 </div>
 

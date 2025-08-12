@@ -2,6 +2,7 @@
 import { ref, computed, watch } from 'vue'
 import { useHead } from 'nuxt/app'
 import ChartComponent from '../components/ChartComponent.vue'
+import FilterPanel from '../components/FilterPanel.vue'
 import { useHubSpotData } from '../composables/useHubSpotData'
 import { useDataProcessing } from '../composables/useDataProcessing'
 
@@ -10,19 +11,13 @@ useHead({ title: 'HubSpot Insights Dashboard' })
 const { data, loading, error } = useHubSpotData()
 const { processChartData } = useDataProcessing()
 
-// Filter state (company size only for now)
-const selectedCompanySizes = ref<string[]>([])
-function toggleCompanySize(size: string) {
-  const next = new Set(selectedCompanySizes.value)
-  if (next.has(size)) next.delete(size)
-  else next.add(size)
-  selectedCompanySizes.value = Array.from(next)
-}
-const filterState = computed(() => ({
-  companySize: selectedCompanySizes.value,
+// Unified filter state
+const filters = ref<{ companySize: string[]; industry: string[]; quarter: string[] }>({
+  companySize: [],
   industry: [],
   quarter: [],
-}))
+})
+const filterState = computed(() => filters.value)
 
 // Pick Q1 only
 const questionQ1 = computed(() => data.value?.questions.find((q: { questionId: string }) => q.questionId === 'q1'))
@@ -30,7 +25,8 @@ const questionQ1 = computed(() => data.value?.questions.find((q: { questionId: s
 // Process into Chart.js-ready data
 const processed = computed(() => {
   if (!questionQ1.value) return null
-  return processChartData(questionQ1.value, filterState.value)
+  const processed = processChartData(questionQ1.value, filterState.value)
+  return processed
 })
 
 // Force destroy/create lifecycle on data changes
@@ -38,7 +34,7 @@ const chartKey = ref(0)
 watch(processed, () => { chartKey.value++ })
 
 const selectedFiltersLabel = computed(() =>
-  selectedCompanySizes.value.length ? selectedCompanySizes.value.join(', ') : 'none',
+  filters.value.companySize.length ? filters.value.companySize.join(', ') : 'none',
 )
 </script>
 
@@ -50,34 +46,20 @@ const selectedFiltersLabel = computed(() =>
       HubSpot Marketing Hub – Insights
     </h1>
 
-    <div
-      class="border-omr-violet-light/30 dark:bg-dt-surface-base rounded-lg border bg-white/80 p-4 shadow-sm dark:border-gray-800"
-    >
-      <h2 class="text-quarter-dark dark:gradient-text mb-4 text-lg font-medium">
-        Filter Bar
-      </h2>
-      <div class="flex flex-wrap items-center gap-2">
-        <span class="text-sm text-gray-600 dark:text-gray-300">Company Size:</span>
-        <template v-if="data">
-          <button
-            v-for="size in data.uniqueValues.companySize"
-            :key="size"
-            class="rounded border px-2 py-1 text-sm hover:bg-gray-100 dark:hover:bg-white/10"
-            :class="selectedCompanySizes.includes(size) ? 'bg-gray-200 dark:bg-white/20' : ''"
-            @click="toggleCompanySize(size)"
-          >
-            {{ size }}
-          </button>
-        </template>
-        <span class="text-sm text-gray-600 dark:text-gray-300">Selected: {{ selectedFiltersLabel }}</span>
-      </div>
+    <div class="border-omr-violet-light/30 dark:bg-dt-surface-base rounded-lg border bg-white/80 p-4 shadow-sm dark:border-gray-800">
+      <FilterPanel
+        v-if="data"
+        :filters="filters"
+        :unique-values="data.uniqueValues"
+        @update:filters="(f) => (filters = f)"
+      />
     </div>
 
     <div
       class="border-omr-violet-light/30 dark:bg-dt-surface-base rounded-lg border bg-white/80 p-4 shadow-sm dark:border-gray-800"
     >
-      <h2 class="text-quarter-dark dark:gradient-text mb-4 text-lg font-medium">
-        Chart
+      <h2 class="text-quarter-dark dark:gradient-text mb-4 text-xl md:text-2xl font-bold">
+        Visualization of Tool Productivity
       </h2>
       <ClientOnly>
         <div v-if="loading" class="grid h-64 place-items-center text-gray-500 dark:text-gray-300">Loading…</div>

@@ -35,7 +35,7 @@ export function useDataProcessing() {
     : 'All Data';
 
   return {
-    labels: Object.keys(aggregated.numResponses),
+    labels: Object.values(aggregated.responseValue),
     values: Object.values(aggregated.numResponses),
     title: question.question,
     subtitle,
